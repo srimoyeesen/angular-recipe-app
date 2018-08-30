@@ -1,0 +1,20 @@
+  <header>
+      <mat-toolbar color="primary">
+          <mat-toolbar-row>
+            <span>Custom Toolbar</span>
+          </mat-toolbar-row>
+</mat-toolbar></header>
+<div class = "recipeListDiv" *ngFor="let recipe of recipeList" >
+    <app-recipe-card [recipeItem] =  "recipe" ></app-recipe-card>
+</div>
+
+  <footer>
+      <mat-toolbar color="primary">
+          <mat-toolbar-row>
+            <span class = "footer-span">
+              <div class="button-row">
+                <button (click)="onAddRecipe()" mat-fab>+</button>
+              </div></span>
+          </mat-toolbar-row>
+          </mat-toolbar></footer>
+

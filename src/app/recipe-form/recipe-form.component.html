@@ -1,0 +1,29 @@
+<h3>Recipe Form</h3>
+<form class="formwidth" (ngSubmit)="onSubmit()" #myForm="ngForm">
+
+        <mat-form-field class="fullwidth">
+          <input matInput placeholder="Recipe Name" id="recipename" [(ngModel)]="recipe.title" name="recipename">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="fullwidth">
+          <input matInput placeholder="Author" id="author" [(ngModel)]="recipe.author" name="author">
+        </mat-form-field>
+
+  <p>
+    <mat-form-field class="fullwidth">
+      <textarea matInput placeholder="Description" id="desc" [(ngModel)]="recipe.description" name="desc"></textarea>
+    </mat-form-field>
+  </p>
+
+        <mat-form-field class="fullwidth">
+          <input matInput placeholder="Video URL" id="video_url" [(ngModel)]="recipe.video_url" name="video_url">
+        </mat-form-field>
+<br>
+        <mat-form-field class="fullwidth">
+          <input matInput placeholder="Image URL" id="image_url" [(ngModel)]="recipe.image_url" name="image_url">
+        </mat-form-field>
+
+  <p>
+    <button type="submit" mat-raised-button>Submit</button>
+  </p>
+</form>

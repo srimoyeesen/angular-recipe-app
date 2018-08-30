@@ -1,0 +1,23 @@
+<div id="card-container" (click)= "onRecipeClick(recipeItem)">
+
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{recipeItem.title}}</mat-card-title>
+    </mat-card-header>
+    <div class = "imageDiv">
+    <img mat-card-image
+    src="https://fakeimg.pl/100x100/?text=image1&font=lobster"
+    alt="Photo of a Shiba Inu"></div>
+    <mat-card-content>
+      <p>
+        {{recipeItem.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Edit</button>
+      <button mat-button>Subscribe</button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>
