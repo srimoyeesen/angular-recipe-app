@@ -11,6 +11,8 @@ import { RecipeFormComponent } from './recipe-form/recipe-form.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { RecipeDetailsComponent } from './recipe-details/recipe-details.component';
 import { RecipeService } from './recipe.service';
+import { IngredientListComponent } from './ingredient-list/ingredient-list.component';
+import { FormDialogComponent } from './form-dialog/form-dialog.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { RecipeService } from './recipe.service';
     HomeComponent,
     RecipeCardComponent,
     RecipeFormComponent,
-    RecipeDetailsComponent
+    RecipeDetailsComponent,
+    IngredientListComponent,
+    FormDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +32,7 @@ import { RecipeService } from './recipe.service';
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents : [FormDialogComponent]
 })
 export class AppModule { }

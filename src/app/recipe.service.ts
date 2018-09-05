@@ -14,21 +14,23 @@ export class RecipeService {
   }
 
   getRecipeList() {
-     return this.http.get('../assets/recipe-list.json');
+     return this.http.get('http://localhost:1337/recipe/list');
   }
 
   getRecipeDetails() {
-     return this.http.get('../assets/recipe-list.json');
+     return this.http.get('http://localhost:1337/recipe/list');
   }
 
   addRecipe(recipe: Recipe) {
-    // this.http.get('../assets/recipe-list.json')
+    // this.http.get('http://localhost:1337/recipe/list')
     //   .subscribe((data) => {
     //     console.log(data.json()['recipes']);
     //   });
-    return this.http.post('../assets/recipe-list.json', 'Data is thsi')
+    console.log('add');
+    return this.http.post('http://localhost:1337/recipe/add', recipe)
     .subscribe((data) => {
-      console.log('data added', data);
+      console.log('Data : ' , data);
     });
+
   }
 }

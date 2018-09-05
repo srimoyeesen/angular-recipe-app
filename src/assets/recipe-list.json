@@ -5,7 +5,7 @@
       "title" : "Chicken Soup",
       "description" : "Lets talk about this soup",
       "author" : "",
-      "video_url" : "",
+      "video_url" : "https://www.youtube.com/embed/b-TGpa0SDXw",
       "image_url" : "",
       "ingredient_list" : ["chicken","salt","pepper","spring onions"]
     },
@@ -14,7 +14,7 @@
       "title" : "Chicken biriyani",
       "description" : "Lets talk about this soup",
       "author" : "",
-      "video_url" : "",
+      "video_url" : "https://www.youtube.com/embed/Bm6UEn3QTfo",
       "image_url" : "",
       "ingredient_list" : ["chicken","rice","salt","onions"]
     }

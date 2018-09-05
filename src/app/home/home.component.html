@@ -1,20 +1,24 @@
   <header>
       <mat-toolbar color="primary">
           <mat-toolbar-row>
-            <span>Custom Toolbar</span>
+            <span>The Recipe App</span>
           </mat-toolbar-row>
 </mat-toolbar></header>
 <div class = "recipeListDiv" *ngFor="let recipe of recipeList" >
     <app-recipe-card [recipeItem] =  "recipe" ></app-recipe-card>
 </div>
 
-  <footer>
+  <!-- <footer>
       <mat-toolbar color="primary">
           <mat-toolbar-row>
             <span class = "footer-span">
               <div class="button-row">
-                <button (click)="onAddRecipe()" mat-fab>+</button>
+                <button  (click) = "openDialog()" mat-fab>+</button>
               </div></span>
           </mat-toolbar-row>
           </mat-toolbar></footer>
+           -->
 
+           <div id= "addButton">
+              <button  (click) = "openDialog()" mat-fab>+</button>
+           </div>
