@@ -14,16 +14,19 @@ export class FormDialogComponent implements OnInit {
 
   form : FormGroup;
   recipe = new Recipe();
-
+  message;
+  ingredients_text ;
 
   constructor( private recipeService: RecipeService, public dialogRef: MatDialogRef<FormDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any) { }
+    @Inject(MAT_DIALOG_DATA) public data: any) { 
+     
+    }
 
   ngOnInit() {
   }
 
   onSubmit(){
-    console.log('recipe : ', this.recipe);
+    this.recipe.ingredient_list = this.ingredients_text.split(',');
     this.recipeService.addRecipe(this.recipe);
     this.dialogRef.close();
   }

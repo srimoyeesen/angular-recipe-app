@@ -1,23 +1,18 @@
   <header>
       <mat-toolbar color="primary">
           <mat-toolbar-row>
-            <span>The Recipe App</span>
+            The Recipe App
+            <span id = "searchBar">
+                <input matInput [(ngModel)]="searchText" placeholder="search text goes here">
+            </span>
           </mat-toolbar-row>
 </mat-toolbar></header>
-<div class = "recipeListDiv" *ngFor="let recipe of recipeList" >
+
+
+
+<div class = "recipeListDiv"  *ngFor="let recipe of recipeList | recipeSearch : searchText" >
     <app-recipe-card [recipeItem] =  "recipe" ></app-recipe-card>
 </div>
-
-  <!-- <footer>
-      <mat-toolbar color="primary">
-          <mat-toolbar-row>
-            <span class = "footer-span">
-              <div class="button-row">
-                <button  (click) = "openDialog()" mat-fab>+</button>
-              </div></span>
-          </mat-toolbar-row>
-          </mat-toolbar></footer>
-           -->
 
            <div id= "addButton">
               <button  (click) = "openDialog()" mat-fab>+</button>

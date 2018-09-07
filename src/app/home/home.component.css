@@ -19,3 +19,8 @@ footer {
   bottom: 25px;
   right: 25px; 
 }
+
+#searchBar{
+  position: fixed;
+  right: 25px;
+}

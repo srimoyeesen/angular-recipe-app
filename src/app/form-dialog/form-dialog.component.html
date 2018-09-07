@@ -15,6 +15,13 @@
     </mat-form-field>
   </p>
 
+  <p>
+      <mat-form-field class="fullwidth">
+        <textarea matInput placeholder="Add comma separated ingredients" id="ingredients" 
+        [(ngModel)]="ingredients_text" name="ingredients"></textarea>
+      </mat-form-field>
+    </p>
+
         <mat-form-field class="fullwidth">
           <input matInput placeholder="Video URL" id="video_url" [(ngModel)]="recipe.video_url" name="video_url">
         </mat-form-field>

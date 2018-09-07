@@ -37,16 +37,9 @@ export class RecipeDetailsComponent implements OnInit {
   ngOnInit() {
     this.recipeID = this.route.snapshot.params['id'];
     const id = this.recipeID;
-    this.recipeService.getRecipeList()
-    .subscribe(res => {
-      this.recipeList = res.json()['recipes'];
-      this.selectedRecipe = this.recipeList.find((data) => {
-        console.log('recipe id  ', data.recipe_id);
-        return data.recipe_id === id;
-      });
-      console.log(this.selectedRecipe);
-      this.iframeURL = this.sanitizer.bypassSecurityTrustResourceUrl(this.selectedRecipe.video_url);
-    });
+   this.selectedRecipe = this.recipeService.getRecipeByID(id);
+   console.log('Observbale : ', (this.recipeService.recipeList));
+    this.iframeURL = this.sanitizer.bypassSecurityTrustResourceUrl(this.selectedRecipe.video_url);
   }
 
   showIngredientList(){

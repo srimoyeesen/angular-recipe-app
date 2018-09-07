@@ -10,9 +10,9 @@ import { RecipeCardComponent } from './recipe-card/recipe-card.component';
 import { RecipeFormComponent } from './recipe-form/recipe-form.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { RecipeDetailsComponent } from './recipe-details/recipe-details.component';
-import { RecipeService } from './recipe.service';
 import { IngredientListComponent } from './ingredient-list/ingredient-list.component';
 import { FormDialogComponent } from './form-dialog/form-dialog.component';
+import { RecipeSearchPipe } from './recipe-search.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,8 @@ import { FormDialogComponent } from './form-dialog/form-dialog.component';
     RecipeFormComponent,
     RecipeDetailsComponent,
     IngredientListComponent,
-    FormDialogComponent
+    FormDialogComponent,
+    RecipeSearchPipe
   ],
   imports: [
     BrowserModule,
